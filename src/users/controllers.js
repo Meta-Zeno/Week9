@@ -23,4 +23,16 @@ const getAllUsers = async (req, res) => {
   }
 };
 
-module.exports = { signupUser: signupUser, getAllUsers: getAllUsers };
+const login = async (req, res) => {
+  try {
+    res.send("hello world");
+  } catch (error) {
+    res.status(500).json({ message: error.message, error: error });
+  }
+};
+
+module.exports = {
+  signupUser: signupUser,
+  getAllUsers: getAllUsers,
+  login: login,
+};
