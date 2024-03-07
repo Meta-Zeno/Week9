@@ -25,7 +25,9 @@ const getAllUsers = async (req, res) => {
 
 const login = async (req, res) => {
   try {
-    res.send("hello world");
+    //send back message and user
+
+    res.status(200).json({ message: "login successful", user: req.user });
   } catch (error) {
     res.status(500).json({ message: error.message, error: error });
   }
